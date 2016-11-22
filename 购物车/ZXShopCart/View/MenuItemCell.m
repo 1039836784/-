@@ -33,7 +33,7 @@
     self.goodsOriginalPriceLabel.text = [NSString stringWithFormat:@"原价：¥ %.2f", goods.goodsOriginalPrice];
     self.goodsSalePriceLabel.text = [NSString stringWithFormat:@"¥ %.2f", goods.goodsSalePrice];
     self.goodsCountLabel.text = [NSString stringWithFormat:@"%zd", goods.orderCount];
-    
+    NSLog(@"goods.orderCount===%ld",goods.orderCount);
     if (_goods.orderCount > 0) {
         [self.minusButton setHidden:NO];
         [self.goodsCountLabel setHidden:NO];
@@ -42,15 +42,15 @@
         [self.goodsCountLabel setHidden:YES];
     }
     
-    if (!_goods.goodsStock  > 0) {
-        //self.soldoutBackgroudView.hidden = NO;
-        self.soldoutIconView.hidden = NO;
-        _plusButton.enabled = NO;
-    } else {
-        //self.soldoutBackgroudView.hidden = YES;
-        self.soldoutIconView.hidden = YES;
-        _plusButton.enabled = YES;
-    }
+//    if (!_goods.goodsStock  > 0) {
+//        //self.soldoutBackgroudView.hidden = NO;
+//        self.soldoutIconView.hidden = NO;
+//        _plusButton.enabled = NO;
+//    } else {
+//        //self.soldoutBackgroudView.hidden = YES;
+//        self.soldoutIconView.hidden = YES;
+//        _plusButton.enabled = YES;
+//    }
 }
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

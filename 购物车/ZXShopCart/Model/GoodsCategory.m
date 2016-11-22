@@ -12,17 +12,6 @@
 
 @implementation GoodsCategory
 
-//- (void)setGoodsArray:(NSMutableArray *)goodsArray {
-//    _goodsArray = [NSMutableArray array];
-//    
-//    if (goodsArray.count == 0) {
-//        return;
-//    }
-//    
-//    NSArray *array = [GoodsModel objectArrayWithKeyValuesArray:goodsArray];
-//    [_goodsArray addObjectsFromArray:array];
-//}
-
 // 实现这个方法的目的：告诉MJExtension框架goodsArray数组里面装的是GoodsModel模型
 + (NSDictionary *)objectClassInArray {
     return @{
